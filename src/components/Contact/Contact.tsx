@@ -17,8 +17,8 @@ const Contact = () => {
       // For other platforms, we'll use a fetch request
       const formData = new FormData(form);
 
-      // Add form name for Netlify
-      formData.append('form-name', 'contact');
+      // Form name is already included in the hidden input
+      // formData.append('form-name', 'contact');
 
       const response = await fetch('/', {
         method: 'POST',
