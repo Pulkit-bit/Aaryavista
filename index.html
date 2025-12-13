@@ -1,36 +1,43 @@
 <!doctype html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <link rel="icon" type="image/svg+xml" href="/vite.svg" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    
-    <!-- SEO Meta Tags -->
-    <title>Aaryavista - Elevating Brands, Amplifying Voices | PR Agency</title>
-    <meta name="description" content="Aaryavista is a dynamic PR agency dedicated to shaping narratives, building reputations, and driving engagement. Expert in Indian and global markets with services in media relations, reputation management, and digital marketing." />
-    <meta name="keywords" content="PR agency, public relations, marketing, media relations, reputation management, social media management, digital marketing, India" />
-    <meta name="author" content="Aaryavista" />
-    
-    <!-- Open Graph Meta Tags -->
-    <meta property="og:title" content="Aaryavista - Elevating Brands, Amplifying Voices" />
-    <meta property="og:description" content="Dynamic PR agency specializing in public relations and marketing with expertise in Indian and global markets." />
-    <meta property="og:type" content="website" />
-    
-    <!-- Theme Color -->
-    <meta name="theme-color" content="#667eea" />
-  </head>
-  <body>
-    <div id="root"></div>
-    <!-- 
+
+<head>
+  <meta charset="UTF-8" />
+  <link rel="icon" type="image/svg+xml" href="/vite.svg" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+  <!-- SEO Meta Tags -->
+  <title>Aaryavista - Elevating Brands, Amplifying Voices | PR Agency</title>
+  <meta name="description"
+    content="Aaryavista is a dynamic PR agency dedicated to shaping narratives, building reputations, and driving engagement. Expert in Indian and global markets with services in media relations, reputation management, and digital marketing." />
+  <meta name="keywords"
+    content="PR agency, public relations, marketing, media relations, reputation management, social media management, digital marketing, India" />
+  <meta name="author" content="Aaryavista" />
+
+  <!-- Open Graph Meta Tags -->
+  <meta property="og:title" content="Aaryavista - Elevating Brands, Amplifying Voices" />
+  <meta property="og:description"
+    content="Dynamic PR agency specializing in public relations and marketing with expertise in Indian and global markets." />
+  <meta property="og:type" content="website" />
+
+  <!-- Theme Color -->
+  <meta name="theme-color" content="#667eea" />
+</head>
+
+<body>
+  <div id="root"></div>
+  <!-- 
       Netlify Form Detection 
       This hidden form allows Netlify to detect the fields during build time.
     -->
-    <form name="contact" netlify netlify-honeypot="bot-field" hidden>
-      <input type="text" name="name" />
-      <input type="email" name="email" />
-      <input type="tel" name="phone" />
-      <textarea name="message"></textarea>
-    </form>
-    <script type="module" src="/src/main.tsx"></script>
-  </body>
+  <form name="contact" method="POST" data-netlify="true" action="/">
+    <input type="hidden" name="form-name" value="contact" />
+    <input type="text" name="name" />
+    <input type="email" name="email" />
+    <input type="tel" name="phone" />
+    <textarea name="message"></textarea>
+  </form>
+  <script type="module" src="/src/main.tsx"></script>
+</body>
+
 </html>
