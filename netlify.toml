@@ -1,0 +1,20 @@
+[build]
+  publish = "dist"
+  command = "npm run build"
+
+[build.environment]
+  NODE_VERSION = "18"
+
+# Form handling
+[[redirects]]
+  from = "/*"
+  to = "/index.html"
+  status = 200
+
+# Enable form processing
+[build.processing]
+  skip_processing = false
+
+# Form notifications - emails will be sent to this address
+[build.processing.html]
+  pretty_urls = true

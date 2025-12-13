@@ -1,0 +1,7 @@
+<svg viewBox="0 0 400 400" xmlns="http://www.w3.org/2000/svg">
+  <!-- This is a placeholder - you'll need to replace this with the actual SVG code of your logo -->
+  <!-- For now, I'll create a simple version that you can replace -->
+  <circle cx="200" cy="200" r="180" fill="none" stroke="#1e40af" stroke-width="4"/>
+  <text x="200" y="220" text-anchor="middle" font-family="Arial, sans-serif" font-size="48" font-weight="bold" fill="#1e40af">A</text>
+  <text x="200" y="160" text-anchor="middle" font-family="Arial, sans-serif" font-size="16" fill="#7c3aed">AARYAVISTA</text>
+</svg>

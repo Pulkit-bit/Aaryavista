@@ -1,0 +1,332 @@
+/* =========================
+   Contact Section - Base
+   ========================= */
+.contactSection {
+  padding: var(--spacing-3xl) var(--spacing-lg);
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  color: white;
+}
+
+.container {
+  max-width: 900px;
+  margin: 0 auto;
+  text-align: center;
+}
+
+.sectionTitle {
+  font-size: var(--font-size-4xl);
+  font-weight: var(--font-weight-bold);
+  margin-bottom: var(--spacing-md);
+  color: white;
+}
+
+.subtitle {
+  font-size: var(--font-size-lg);
+  line-height: var(--line-height-relaxed);
+  margin-bottom: var(--spacing-2xl);
+  color: rgba(255, 255, 255, 0.95);
+}
+
+/* =========================
+   Contact cards grid + items
+   ========================= */
+.contactInfo {
+  display: grid;
+  gap: var(--spacing-lg);
+  grid-template-columns: repeat(1, 1fr);
+  margin-bottom: var(--spacing-2xl);
+}
+
+.contactItem {
+  background-color: rgba(255, 255, 255, 0.1);
+  backdrop-filter: blur(10px);
+  border-radius: var(--radius-lg);
+  padding: var(--spacing-lg);
+  display: flex;
+  align-items: center;
+  gap: var(--spacing-md);
+  transition: all var(--transition-base);
+  border: 2px solid rgba(255, 255, 255, 0.2);
+  min-height: 120px;
+}
+
+.contactItem:hover {
+  background-color: rgba(255, 255, 255, 0.15);
+  transform: translateY(-2px);
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+}
+
+/* Icon + details */
+.contactIcon {
+  font-size: 2rem;
+  flex-shrink: 0;
+  text-align: center; /* fallback */
+}
+
+.contactDetails {
+  /* keep details a centered column for consistent layout across cards */
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  flex: 1;
+  width: 100%;
+  text-align: center;
+  padding: 0;
+}
+
+.contactLabel {
+  font-size: var(--font-size-sm);
+  font-weight: var(--font-weight-semibold);
+  margin-bottom: var(--spacing-xs);
+  color: rgba(255, 255, 255, 0.8);
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+}
+
+.contactValue {
+  font-size: var(--font-size-lg);
+  font-weight: var(--font-weight-medium);
+  color: white;
+}
+
+/* =========================
+   Team list inside contact card
+   ========================= */
+.teamList {
+  display: block;
+  width: 100%;
+  padding: 0;
+  margin: 6px 0 0 0;
+  text-align: center;
+}
+
+.teamMemberName {
+  display: block;
+  width: 100%;
+  margin: 0;
+  text-align: center;
+  white-space: nowrap;
+  overflow: visible;
+  font-size: var(--font-size-md);
+  font-weight: var(--font-weight-medium);
+  line-height: 1.2;
+}
+
+/* legacy helper */
+.teamMemberName small {
+  display: block;
+  font-size: var(--font-size-sm);
+  color: rgba(255,255,255,0.8);
+}
+
+/* =========================
+   Contact form styles
+   ========================= */
+.contactForm {
+  background-color: rgba(255, 255, 255, 0.1);
+  backdrop-filter: blur(10px);
+  border-radius: var(--radius-lg);
+  padding: var(--spacing-xl);
+  border: 2px solid rgba(255, 255, 255, 0.2);
+  max-width: 600px;
+  margin: 0 auto;
+}
+
+.formTitle {
+  font-size: var(--font-size-xl);
+  font-weight: var(--font-weight-semibold);
+  margin-bottom: var(--spacing-lg);
+  color: white;
+  text-align: center;
+}
+
+.formGroup { margin-bottom: var(--spacing-md); }
+
+.label {
+  display: block;
+  font-size: var(--font-size-sm);
+  font-weight: var(--font-weight-semibold);
+  margin-bottom: var(--spacing-xs);
+  color: rgba(255, 255, 255, 0.9);
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+}
+
+.input,
+.textarea {
+  width: 100%;
+  padding: var(--spacing-sm) var(--spacing-md);
+  border: 2px solid rgba(255, 255, 255, 0.3);
+  border-radius: var(--radius-md);
+  background-color: rgba(255, 255, 255, 0.1);
+  color: white;
+  font-size: var(--font-size-base);
+  transition: all var(--transition-base);
+  min-height: 44px;
+}
+
+.input::placeholder,
+.textarea::placeholder { color: rgba(255, 255, 255, 0.6); }
+
+.input:focus,
+.textarea:focus {
+  outline: none;
+  border-color: rgba(255, 255, 255, 0.8);
+  background-color: rgba(255, 255, 255, 0.15);
+  box-shadow: 0 0 0 3px rgba(255, 255, 255, 0.1);
+}
+
+.textarea {
+  resize: vertical;
+  min-height: 100px;
+  font-family: inherit;
+}
+
+.submitButton {
+  width: 100%;
+  padding: var(--spacing-md) var(--spacing-lg);
+  font-size: var(--font-size-lg);
+  font-weight: var(--font-weight-semibold);
+  color: #667eea;
+  background-color: white;
+  border: none;
+  border-radius: var(--radius-lg);
+  cursor: pointer;
+  transition: all var(--transition-base);
+  min-height: 50px;
+  margin-top: var(--spacing-md);
+}
+
+.submitButton:hover:not(:disabled) {
+  transform: translateY(-2px);
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+  background-color: #f9fafb;
+}
+.submitButton:disabled { opacity: 0.7; cursor: not-allowed; transform: none; }
+.submitButton.success { background-color: #10b981; color: white; }
+
+/* messages */
+.successMessage, .errorMessage {
+  margin-top: var(--spacing-md);
+  padding: var(--spacing-sm);
+  border-radius: var(--radius-md);
+  font-weight: var(--font-weight-medium);
+  text-align: center;
+}
+
+.successMessage {
+  background-color: rgba(16, 185, 129, 0.2);
+  border: 1px solid rgba(16, 185, 129, 0.5);
+  color: #10b981;
+}
+
+.errorMessage {
+  background-color: rgba(239, 68, 68, 0.2);
+  border: 1px solid rgba(239, 68, 68, 0.5);
+  color: #ef4444;
+}
+
+/* =========================
+   Team section (legacy / kept)
+   ========================= */
+.teamSection {
+  margin-top: var(--spacing-2xl);
+  text-align: center;
+}
+
+.teamTitle {
+  font-size: var(--font-size-xl);
+  font-weight: var(--font-weight-semibold);
+  margin-bottom: var(--spacing-lg);
+  color: white;
+}
+
+.teamMembers {
+  display: grid;
+  gap: var(--spacing-lg);
+  grid-template-columns: repeat(1, 1fr);
+  max-width: 600px;
+  margin: 0 auto;
+}
+
+.teamMember {
+  background-color: rgba(255, 255, 255, 0.1);
+  backdrop-filter: blur(10px);
+  border-radius: var(--radius-lg);
+  padding: var(--spacing-lg);
+  display: flex;
+  align-items: center;
+  gap: var(--spacing-md);
+  transition: all var(--transition-base);
+  border: 2px solid rgba(255, 255, 255, 0.2);
+}
+.teamMember:hover {
+  background-color: rgba(255, 255, 255, 0.15);
+  transform: translateY(-2px);
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+}
+
+.memberIcon { font-size: 2rem; flex-shrink: 0; }
+.memberInfo { text-align: left; flex: 1; }
+.memberName {
+  font-size: var(--font-size-lg);
+  font-weight: var(--font-weight-semibold);
+  margin-bottom: var(--spacing-xs);
+  color: white;
+}
+.memberRole {
+  font-size: var(--font-size-sm);
+  color: rgba(255, 255, 255, 0.8);
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+}
+
+/* =========================
+   Responsive layout
+   ========================= */
+
+/* Tablet / small desktop */
+@media (min-width: 768px) {
+  .contactInfo { grid-template-columns: repeat(3, 1fr); }
+  .contactItem { flex-direction: column; text-align: center; }
+  .contactDetails { text-align: center; }
+  .sectionTitle { font-size: var(--font-size-5xl); }
+
+  .teamMembers { grid-template-columns: repeat(2, 1fr); }
+  .teamMember { flex-direction: column; text-align: center; }
+  .memberInfo { text-align: center; }
+}
+
+/* Desktop */
+@media (min-width: 1024px) {
+  .contactSection { padding: var(--spacing-3xl) var(--spacing-xl); }
+  .contactInfo { gap: var(--spacing-xl); }
+  .contactItem { padding: var(--spacing-xl); }
+}
+
+/* Mobile (all mobile rules consolidated here for clarity) */
+@media (max-width: 767px) {
+  .contactSection { padding: var(--spacing-2xl) var(--spacing-md); }
+  .sectionTitle { font-size: var(--font-size-3xl); }
+  .subtitle { font-size: var(--font-size-base); margin-bottom: var(--spacing-lg); }
+
+  .contactItem { padding: var(--spacing-md); flex-direction: column !important; align-items: center !important; justify-content: center; padding-left: 0 !important; padding-right: 0 !important; }
+
+  .contactIcon { font-size: 1.5rem; display: block; margin: 0 auto 12px; line-height: 1; width: auto; text-align: center; }
+  .contactValue { font-size: var(--font-size-base); }
+
+  .contactForm { padding: var(--spacing-lg); margin-top: var(--spacing-lg); }
+  .formTitle { font-size: var(--font-size-lg); margin-bottom: var(--spacing-md); }
+  .input, .textarea { padding: var(--spacing-sm); font-size: var(--font-size-sm); }
+  .submitButton { padding: var(--spacing-sm) var(--spacing-md); font-size: var(--font-size-base); }
+  .successMessage, .errorMessage { font-size: var(--font-size-sm); padding: var(--spacing-xs); }
+
+  /* Team list + names mobile tweaks */
+  .teamList { display: block; text-align: center; margin: 0.25rem 0 0; }
+  .teamMemberName { display: block; text-align: center; margin: 0 auto; font-size: var(--font-size-sm); white-space: nowrap; }
+  .teamMember { padding: var(--spacing-md); }
+  .memberIcon { font-size: 1.5rem; }
+  .memberName { font-size: var(--font-size-base); }
+  .memberRole { font-size: var(--font-size-xs); }
+}
