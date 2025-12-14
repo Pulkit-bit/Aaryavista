@@ -17,8 +17,11 @@ const Contact = () => {
       // For other platforms, we'll use a fetch request
       const formData = new FormData(form);
 
-      // Form name is already included in the hidden input
-      // formData.append('form-name', 'contact');
+      // Ensure form-name is explicitly present for Netlify
+      // Even if the hidden input exists, explicit append guarantees it
+      if (!formData.has('form-name')) {
+        formData.append('form-name', 'contact');
+      }
 
       const response = await fetch('/', {
         method: 'POST',
