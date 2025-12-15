@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Netlify Form Helper</title>
+</head>
+
+<body>
+    <!-- 
+      This file exists solely to ensure Netlify detects the contact form.
+      It is served as a static file but not linked in the UI.
+    -->
+    <form name="contact" netlify netlify-honeypot="bot-field" hidden>
+        <input type="text" name="name" />
+        <input type="email" name="email" />
+        <input type="tel" name="phone" />
+        <textarea name="message"></textarea>
+    </form>
+</body>
+
+</html>
