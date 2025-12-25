@@ -1,28 +1,21 @@
-import Navigation from './components/Layout/Navigation';
+import Navbar from './components/Layout/Navbar';
+import Footer from './components/Layout/Footer';
 import Hero from './components/Hero/Hero';
 import Services from './components/Services/Services';
-import WhyUs from './components/WhyUs/WhyUs';
 import Contact from './components/Contact/Contact';
-import Footer from './components/Layout/Footer';
+import WhyUs from './components/WhyUs/WhyUs';
 
 function App() {
   return (
     <div className="app">
-      {/* Skip to content link for accessibility */}
-      <a href="#services" className="skip-to-content">
-        Skip to main content
-      </a>
-
-      <Navigation />
-
+      <Navbar />
       <main>
         <Hero />
-        <Services />
+        {/* WhyUs serves as the "About" or "Intro" section */}
         <WhyUs />
+        <Services />
         <Contact />
       </main>
-
-
       <Footer />
     </div>
   );
