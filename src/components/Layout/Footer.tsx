@@ -1,34 +1,43 @@
-import styles from './Footer.module.css';
-
 const Footer = () => {
   const currentYear = new Date().getFullYear();
 
   return (
-    <footer className={styles.footer}>
-      <div className={styles.container}>
-        <div className={styles.grid}>
-          <div className={styles.column}>
-            <h3>Aaryavista</h3>
-            <p style={{ color: 'var(--color-text-light)', lineHeight: '1.6' }}>
+    <footer className="bg-slate-950 py-6 border-t border-slate-900">
+      <div className="container mx-auto px-6">
+        <div className="flex flex-col md:flex-row justify-between items-start gap-4 mb-4">
+
+          {/* Brand Column */}
+          <div className="max-w-md">
+            <h3 className="text-lg font-bold bg-clip-text text-transparent bg-gradient-to-r from-indigo-400 to-pink-500 mb-2 font-heading">
+              Aaryavista
+            </h3>
+            <p className="text-slate-400 leading-relaxed text-xs">
               Elevating Brands, Amplifying Voices. <br />
               Your partner in strategic public relations and reputation management.
             </p>
           </div>
 
-          <div className={styles.column}>
-            <h3>Quick Links</h3>
-            <ul>
-              <li><a href="#services">Services</a></li>
-              <li><a href="#why-us">Why Us</a></li>
-              <li><a href="#contact">Contact</a></li>
+          {/* Quick Links Column */}
+          <div>
+            <h3 className="text-xs font-semibold text-white mb-2 uppercase tracking-wider">Quick Links</h3>
+            <ul className="flex flex-wrap gap-4 md:space-y-0 md:gap-6">
+              <li>
+                <a href="#services" className="text-slate-400 hover:text-white transition-colors text-xs">Services</a>
+              </li>
+              <li>
+                <a href="#why-us" className="text-slate-400 hover:text-white transition-colors text-xs">Why Us</a>
+              </li>
+              <li>
+                <a href="#contact" className="text-slate-400 hover:text-white transition-colors text-xs">Contact</a>
+              </li>
             </ul>
           </div>
 
-
         </div>
 
-        <div className={styles.copyright}>
-          <p>&copy; {currentYear} Aaryavista. All rights reserved.</p>
+        {/* Copyright */}
+        <div className="pt-4 border-t border-slate-900 text-center">
+          <p className="text-slate-500 text-xs">&copy; {currentYear} Aaryavista. All rights reserved.</p>
         </div>
       </div>
     </footer>
