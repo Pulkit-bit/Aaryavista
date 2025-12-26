@@ -1,4 +1,4 @@
-import { BarChart3, Globe, PenTool, Search, Share2, Smartphone, ArrowRight } from 'lucide-react';
+import { BarChart3, Globe, PenTool, Search, Share2, Smartphone } from 'lucide-react';
 import styles from './Services.module.css';
 
 const servicesData = [
@@ -55,9 +55,7 @@ const Services = () => {
               </div>
               <h3>{service.title}</h3>
               <p>{service.description}</p>
-              <div className={styles.learnMore}>
-                Learn More <ArrowRight size={16} />
-              </div>
+
             </div>
           ))}
         </div>
